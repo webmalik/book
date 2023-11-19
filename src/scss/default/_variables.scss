@@ -1,0 +1,50 @@
+// ! Media mixin sizes
+// Різні девайси
+
+$sizes: (
+	"xs": 576px,
+	"sm": 767px,
+	"md": 992px,
+	"lg": 1200px,
+	"xl": 1400px
+);
+
+$xs: 576px;
+$sm: 767px;
+$md: 992px;
+$lg: 1200px;
+$xl: 1400px;
+
+// Типографіка
+$font-family: "Montserrat";
+$font-size: 16px;
+$line-height: 1.5;
+$color: #000000;
+
+// Кольори
+$main_color: #080707;
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$white_color: #ffffff;
+$black_color: #000000;
+$silver_color: #151414;
+$border_silver_color: #b8b8b8;
+
+// Розміщення блоків
+$container-width: 1200px;
+$maxWidth: 1920;
+$maxWidthContainer: 1200;
+// Анімація
+$transition-duration: 0.2s;
+$hover-transition: all $transition-duration ease-in-out;
+
+$breakpoints: (
+	small: 320px,
+	medium: 768px,
+	large: 1024px,
+	xlarge: 1366px
+);
+
+$base-font-size: 16px;
+$ems: 1em;
+$rems: 1rem;

@@ -1,0 +1,104 @@
+.modal {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background-color: transparent;
+	z-index: 99;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease-in-out;
+	visibility: hidden;
+	pointer-events: none;
+
+	& .modal__container {
+		transition: all 0.2s ease-in-out;
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	&.active {
+		& .modal__close {
+			visibility: visible;
+		}
+
+		& .modal__container {
+			visibility: visible;
+			opacity: 1;
+		}
+		background-color: rgba($color: #2b2b2b, $alpha: 0.3);
+		pointer-events: all;
+		visibility: visible;
+		animation: modal 0.5s;
+	}
+
+	&__wrapper {
+		position: relative;
+		@include adaptiv-value("max-width", toPX(33.875), toPX(20), 1);
+		width: 100%;
+		border-radius: 0.625rem;
+		background: var(--white, #fcfcfc);
+		padding: 1.63rem;
+		min-height: 10rem;
+	}
+
+	&__close {
+		visibility: hidden;
+		border-radius: 0.3rem;
+		border: 0.4px solid var(--grey-2, #8b8b8b);
+		padding: 0.25rem;
+		position: absolute;
+		top: 2.06rem;
+		right: 1.63rem;
+		cursor: pointer;
+		transition: $hover-transition;
+		&:hover {
+			svg {
+				animation: modal 0.5s;
+				transition: $hover-transition;
+				path {
+					fill: #fcfcfc;
+				}
+			}
+		}
+	}
+}
+
+.close__modal--animations {
+	animation: modal_close 0.8s;
+}
+
+@include media-width(500px) {
+	.modal {
+		&__wrapper {
+			max-width: 17.75rem;
+		}
+	}
+}
+
+@keyframes modal {
+	0% {
+		transform: scale(0.2);
+	}
+	50% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes modal_close {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: scale(0);
+	}
+}

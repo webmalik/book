@@ -1,0 +1,49 @@
+%position_center {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	padding: 0 10px;
+}
+
+%position_left {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+	padding: 0 10px;
+}
+
+%position_right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	padding: 0 10px;
+}
+
+%flex-element-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+%flex-element-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+%rectangle-button {
+	background-color: #EB1C23FF;
+	border-radius: 8px;
+	width: 260px;
+	height: 58px;
+	margin: 70px auto;
+	color: #fff;
+	font-weight: 500;
+}

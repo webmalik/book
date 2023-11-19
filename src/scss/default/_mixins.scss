@@ -1,0 +1,114 @@
+@mixin tr_duration($time) {
+	-webkit-transition-duration: $time;
+	-moz-transition-duration: $time;
+	-o-transition-duration: $time;
+	-ms-transition-duration: $time;
+	transition-duration: $time;
+}
+/*
+	! Media mixin
+*/
+
+@mixin media($minmax, $media) {
+	@each $size, $resolution in $sizes {
+		@if $media ==$size {
+			@if ($minmax != "within") {
+				@media (#{$minmax}-width: $resolution) {
+					@content;
+				}
+			} @else {
+				@if (index(map-keys($sizes), $media) > 1) {
+					@media (min-width: getPreviousSize($media)) and (max-width: $resolution) {
+						@content;
+					}
+				} @else {
+					@media (max-width: $resolution) {
+						@content;
+					}
+				}
+			}
+		}
+	}
+}
+
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+	$addSize: $startSize - $minSize;
+
+	@if $type ==1 {
+		#{$property}: $startSize + px;
+
+		@media (max-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 360px) / #{$maxWidthContainer - 360}));
+		}
+	} @else if $type ==2 {
+		@media (min-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 360px) / #{$maxWidthContainer - 360}));
+		}
+	} @else {
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 360px) / #{$maxWidthContainer - 360}));
+	}
+}
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$addMobSize: $addSize + $addSize * 0.7;
+
+	@media (max-width: 767px) {
+		font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 360px) / #{$maxWidth}));
+	}
+
+	@media (min-width: 767px) {
+		font-size: calc(#{$mobSize + px} + #{$addMobSize} * (100vw / #{$maxWidth}));
+	}
+}
+
+@mixin responsive-grid($columns, $gap) {
+	display: grid;
+	grid-template-columns: repeat($columns, 1fr);
+	grid-gap: $gap;
+
+	@each $breakpoint, $width in $breakpoints {
+		@media (min-width: $width) {
+			$columns-at-breakpoint: if($columns > 1, $columns, 1);
+			grid-template-columns: repeat($columns-at-breakpoint, 1fr);
+		}
+	}
+}
+
+@mixin media-width($width, $type: max) {
+	@if $type ==max {
+		@media (max-width: $width) {
+			@content;
+		}
+	} @else if $type ==min {
+		@media (min-width: $width) {
+			@content;
+		}
+	} @else {
+		@error "Invalid type. Please use 'max' or 'min'.";
+	}
+}
+
+@function convert-units($value, $type) {
+	@if $type ==em {
+		@return $value / $base-font-size * 1em;
+	} @else if $type ==percent {
+		@return $value / 100 * 1%;
+	} @else if $type ==rem {
+		@return $value / $base-font-size * 1rem;
+	} @else if $type ==vw {
+		@return $value / 100 * 1vw;
+	} @else if $type ==vh {
+		@return $value / 100 * 1vh;
+	} @else if $type ==vmin {
+		@return $value / 100 * 1vmin;
+	} @else if $type ==vmax {
+		@return $value / 100 * 1vmax;
+	} @else {
+		@error "Invalid type. Please use 'em', 'percent', 'rem', 'vw', 'vh', 'vmin', or 'vmax'.";
+	}
+}
+
+@mixin convert($property, $value, $type) {
+	#{$property}: #{convert-units($value, $type)};
+}
