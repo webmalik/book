@@ -38,14 +38,14 @@
 		#{$property}: $startSize + px;
 
 		@media (max-width: #{$maxWidthContainer + px}) {
-			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 360px) / #{$maxWidthContainer - 360}));
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidthContainer - 375}));
 		}
 	} @else if $type ==2 {
 		@media (min-width: #{$maxWidthContainer + px}) {
-			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 360px) / #{$maxWidthContainer - 360}));
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidthContainer - 375}));
 		}
 	} @else {
-		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 360px) / #{$maxWidthContainer - 360}));
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidthContainer - 375}));
 	}
 }
 
@@ -54,7 +54,7 @@
 	$addMobSize: $addSize + $addSize * 0.7;
 
 	@media (max-width: 767px) {
-		font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 360px) / #{$maxWidth}));
+		font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 375px) / #{$maxWidth}));
 	}
 
 	@media (min-width: 767px) {

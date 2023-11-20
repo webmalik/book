@@ -1,0 +1,75 @@
+.banner {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	min-height: 100dvh;
+	&__content {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		@include adaptiv-value("padding-left", toPX(3.25), toPX(1.25), 1);
+		@include adaptiv-value("padding-right", toPX(3.25), toPX(1.25), 1);
+		padding-bottom: 3.94rem;
+	}
+	&__image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+		border-radius: 0 0 0 1.5625rem;
+		background-color: #ffd6a7;
+		background-image: url("../img/book-bg.svg");
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		picture,
+		img {
+			max-width: 29.125rem;
+			height: auto;
+		}
+	}
+
+	&__link {
+		display: inline;
+		margin: 0 auto -1.45rem -1.75rem;
+		color: #081a00;
+		font-family: $font-family-philosopher;
+		@include adaptiv-value("font-size", toPX(1.625), toPX(1), 1);
+		font-style: normal;
+		padding: 2.71rem 1.75rem 2.2rem;
+		font-weight: 400;
+		line-height: normal;
+		background-image: url("../img/bg-1.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: transparent;
+	}
+
+	&__title {
+	}
+
+	&__desc {
+		color: $primary-color;
+		font-family: $font-family-philosopher;
+		@include adaptiv-value("font-size", toPX(1.625), toPX(1), 1);
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+
+		@include adaptiv-value("margin-top", toPX(2.25), toPX(0.87), 1);
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		gap: 0.63rem;
+		@include adaptiv-value("margin-top", toPX(2.81), toPX(1.53), 1);
+	}
+
+	&__button {
+		&.active {
+		}
+	}
+}

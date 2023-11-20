@@ -1,0 +1,90 @@
+.header {
+	position: fixed;
+	width: 100%;
+	z-index: 5;
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 3fr 1fr;
+		align-items: center;
+		@include adaptiv-value("padding-top", toPX(3), toPX(2), 1);
+	}
+
+	&__logo {
+		color: $primary-color;
+		font-family: $font-family-cormorant;
+		@include adaptiv-value("font-size", toPX(1.66819), toPX(1.41069), 1);
+		font-style: normal;
+		font-weight: 700;
+		line-height: 81.8%;
+		letter-spacing: -0.05006rem;
+	}
+
+	&__nav {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__menu {
+		display: flex;
+		align-items: center;
+		gap: 2.44rem;
+
+		li {
+			color: $primary-color;
+			font-family: $font-family-philosopher;
+			font-size: 1.25rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			text-transform: capitalize;
+		}
+	}
+
+	&__button {
+		display: none;
+	}
+
+	&__burger {
+		display: none;
+	}
+
+	&__link {
+		color: $primary-color;
+		font-family: $font-family-philosopher;
+		font-size: 1.25rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		text-decoration-line: underline;
+		text-align: right;
+	}
+}
+
+@include media-width($md) {
+	.header {
+		&__wrapper {
+		}
+
+		&__logo {
+		}
+
+		&__nav {
+		}
+
+		&__menu {
+		}
+
+		&__button {
+			&.active {
+			}
+		}
+
+		&__burger {
+			display: block;
+		}
+
+		&__link {
+			display: none;
+		}
+	}
+}

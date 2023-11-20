@@ -17,11 +17,56 @@ img {
 	object-position: center;
 }
 
+li {
+	a {
+		color: inherit;
+		font-family: inherit;
+		font-size: inherit;
+		font-style: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+		text-transform: inherit;
+	}
+}
+
 .wrapper {
 	min-height: 100%;
 	position: relative;
 	display: flex;
 	flex-direction: column;
+	background-color: $main-color;
+}
+
+.title {
+	color: $primary-color;
+	font-family: $font-family-cormorant;
+	@include adaptiv-value("font-size", toPX(6.5625), toPX(2.625), 1);
+	font-style: normal;
+	font-weight: 700;
+	line-height: 81.8%; /* 5.36813rem */
+	letter-spacing: -0.19688rem;
+	text-wrap: balance;
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 1.75rem 0 1.81rem 0;
+	color: $primary-color;
+	font-family: $font-family-philosopher;
+	@include adaptiv-value("font-size", toPX(1.625), toPX(1), 1);
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	border-radius: 0.625rem;
+	border: 1px solid $primary-color;
+
+	&.active {
+		background-color: $primary-color;
+		color: #fbf5dd;
+	}
 }
 
 .main {
@@ -131,37 +176,6 @@ img {
 
 .container {
 	position: relative;
-	max-width: $container-width;
-	margin: 0 auto;
-}
-
-@include media-width(1300px) {
-	.container {
-		max-width: 1050px;
-	}
-}
-
-@include media-width(1100px) {
-	.container {
-		max-width: 920px;
-	}
-}
-
-@include media-width($md) {
-	.container {
-		max-width: 800px;
-	}
-}
-
-@include media-width(850px) {
-	.container {
-		max-width: $sm;
-	}
-}
-
-@include media-width($sm) {
-	.container {
-		max-width: none;
-		padding: 0 1.25rem;
-	}
+	@include adaptiv-value("padding-left", toPX(3.25), toPX(1.25), 1);
+	@include adaptiv-value("padding-right", toPX(3.25), toPX(1.25), 1);
 }

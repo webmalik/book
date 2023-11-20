@@ -5,71 +5,72 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.min.css?_v=20231119233000">
+	<link rel="stylesheet" href="css/style.min.css">
 	<title>Головна сторінка</title>
 </head>
 
 <body>
 	<div class="wrapper">
 		<header class="header">
-
-</header>
-		<main class="main webmalik">
-	<div class="webmalik__wrapper">
-		<section class="webmalik__container">
-			<aside class="webmalik__aside">
-				<div class="webmalik__image">
-					<img src="img/WM_logo.svg" alt="">
-				</div>
-				<div class="webmalik__header">
-					Проект: Новий проєкт
-				</div>
-				<div class="webmalik__nav"></div>
-			</aside>
-			<section class="webmalik__body">
-				<h2>Документація:</h2>
-				<br>
-				<h3>Проєкт</h3><br>
-				<p>
-					Для перегляду сторінок проекту, скористайтесь, будь ласка, навігаційною панеллю зліва.
-				</p>
-				<br>
-				<h3>Збірка</h3>
-				<p>
-				<h4>Команди для збірки: </h4>
-				<div class="webmalik__flex">
-					<span class="copy__link">npm run dev</span>
-					<p>Запускає режим розробника</p>
-				</div>
-				<div class="webmalik__flex">
-					<span class="copy__link">npm run build</span>
-					<p>Запускає режим збірки проекту в папку dist</p>
-				</div>
-				<div class="webmalik__flex">
-					<span class="copy__link">npm run zip</span>
-					<p>Запускає режим збірки проекту в ахів</p>
-				</div>
-				<div class="webmalik__flex">
-					<span class="copy__link">npm run ftp</span>
-					<p>Запускає режим збірки проекту і відправлення на ftp-сервер</p>
-				</div>
-				<div class="webmalik__flex mob-1">
-					<span class="copy__link">npm run page -- --page=назва_файлу --name=назва_сторінки</span>
-					<p>Створення
-						нової сторінки і
-						створення всіх необхідних файлів для роботи сторінки в проекті</p>
-				</div>
-				</p>
-			</section>
-		</section>
+	<div class="container">
+		<div class="header__wrapper">
+			<a href="#" class="header__logo">
+				Katarina_Movchan
+			</a>
+			<div class="header__nav">
+				<ul class="header__menu">
+					<li><a href="#">Наповнення</a></li>
+					<li><a href="#">автор</a></li>
+					<li><a href="#">Відгуки</a></li>
+					<li><a href="#">збірники</a></li>
+				</ul>
+				<a href="#" class="header__button button active">
+					Придбати
+				</a>
+				<a href="#" class="header__button button">
+					Завантажити зразок
+				</a>
+			</div>
+			<div class="header__burger active" id="nav-icon1">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<a href="#" class="header__link">Завантажити зразок</a>
+		</div>
 	</div>
-	<div id="popupMessage"></div>
+</header>
+		<main class="main">
+	<div class="banner">
+		<div class="banner__content">
+			<div class="banner__link">
+				@Katarina_Movchan.
+			</div>
+			<div class="banner__title title">
+				Збірники
+				авторських рецептів
+			</div>
+			<div class="banner__desc">
+				Зберігай час та готуй комфортну їжу - легко та зі смаком,
+				завдяки моїм докладним рецептам та корисним порадам.
+			</div>
+			<div class="banner__buttons">
+				<a href="#" class="banner__button button active">
+					Придбати
+				</a>
+				<a href="#" class="banner__button button">Завантажити зразок</a>
+			</div>
+		</div>
+		<div class="banner__image">
+			<img src="img/book.png" alt="Book">
+		</div>
+	</div>
 </main>
 		<footer class="footer">
 
 </footer>
 	</div>
-	<script src="js/app.min.js?_v=20231119233000"></script>
+	<script src="js/app.min.js"></script>
 </body>
 
 </html>
