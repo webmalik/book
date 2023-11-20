@@ -1,0 +1,124 @@
+.buy {
+	&__title {
+		@include adaptiv-value("margin-bottom", toPX(4.38), toPX(1.87), 1);
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 1.19rem;
+	}
+}
+.card {
+	@include adaptiv-value("border-top-left-radius", toPX(1.25), toPX(0.5), 1);
+	@include adaptiv-value("border-bottom-left-radius", toPX(1.25), toPX(0.5), 1);
+	@include adaptiv-value("border-bottom-right-radius", toPX(1.25), toPX(0.5), 1);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	&__image {
+		position: relative;
+
+		picture,
+		img {
+			height: 100%;
+			width: auto;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			right: -1px;
+			width: 100%;
+			height: 100%;
+			@include adaptiv-value("max-width", toPX(5.10975), toPX(3.351), 1);
+			@include adaptiv-value("max-height", toPX(7.62544), toPX(4.99713), 1);
+			background-image: url("../img/split-border-1.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			transform: rotateY(180deg);
+		}
+	}
+
+	&__content {
+		@include adaptiv-value("padding", toPX(2.25), toPX(1.25), 1);
+		background: #ffd6a7;
+	}
+
+	&__title {
+		color: $primary-color;
+		font-family: $font-family-philosopher;
+		@include adaptiv-value("font-size", toPX(2.125), toPX(1.75), 1);
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+	}
+
+	&__lables {
+		@include adaptiv-value("margin-top", toPX(1.14), toPX(0.56), 1);
+		span {
+			color: $primary-color;
+			font-family: $font-family-philosopher;
+			@include adaptiv-value("font-size", toPX(1.625), toPX(1), 1);
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			background-image: url("../img/card_label.png");
+			padding: 0.5rem 1.3rem;
+			margin: -0.5rem 0.3rem -0.5rem -0.8rem;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+	}
+
+	&__desc {
+		@include adaptiv-value("margin-top", toPX(1.6), toPX(0.69), 1);
+		color: $primary-color;
+		font-family: $font-family-philosopher;
+		@include adaptiv-value("font-size", toPX(1.625), toPX(1), 1);
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+
+	&__price {
+		@include adaptiv-value("margin-top", toPX(0.63), toPX(0.31), 1);
+		display: flex;
+		align-items: flex-end;
+		@include adaptiv-value("gap", toPX(0.75), toPX(0.31), 1);
+		p {
+			color: $primary-color;
+			font-family: $font-family-philosopher;
+			@include adaptiv-value("font-size", toPX(2.125), toPX(1.1875), 1);
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+		}
+
+		span {
+			color: $primary-color;
+			font-family: $font-family-philosopher;
+			@include adaptiv-value("font-size", toPX(1.25), toPX(0.75), 1);
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			text-decoration: line-through;
+			opacity: 0.7;
+		}
+	}
+
+	&__button {
+		@include adaptiv-value("margin-top", toPX(1.25), toPX(0.94), 1);
+	}
+}
+
+@include media-width($md) {
+	.buy {
+		&__wrapper {
+			grid-template-columns: 1fr;
+		}
+	}
+}

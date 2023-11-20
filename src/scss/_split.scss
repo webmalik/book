@@ -15,6 +15,7 @@
 		background: #ffd6a7;
 		@include adaptiv-value("padding-bottom", toPX(2.25), toPX(1.27), 1);
 		@include adaptiv-value("padding-left", toPX(2.19), toPX(1.25), 1);
+		@include adaptiv-value("padding-right", toPX(2.19), toPX(1.25), 1);
 		@include adaptiv-value("padding-top", toPX(2.25), toPX(1.27), 1);
 		display: flex;
 		flex-direction: column;
@@ -60,8 +61,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		@include adaptiv-value("min-height", toPX(24.81), toPX(13.75), 1);
-		//min-height: 24.81rem;
 
 		picture,
 		img {

@@ -1,0 +1,209 @@
+.passage {
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		@include adaptiv-value("gap", toPX(1.5), toPX(1.25), 1);
+		@include adaptiv-value("margin-top", toPX(4.38), toPX(1.88), 1);
+	}
+
+	&__item {
+		border-radius: 1.5625rem;
+		background: #ffd6a7;
+		@include adaptiv-value("padding-top", toPX(3.06), toPX(1.25), 1);
+		@include adaptiv-value("padding-bottom", toPX(2.54), toPX(1.25), 1);
+		@include adaptiv-value("padding-left", toPX(3), toPX(1.25), 1);
+		@include adaptiv-value("padding-right", toPX(9.25), toPX(1.25), 1);
+
+		&:first-child {
+			.passage__title {
+				position: relative;
+				display: inline-block;
+				background-image: url("../img/pas-1.png");
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center top 40%;
+				padding-left: 2rem;
+				padding-right: 0.5rem;
+				padding-bottom: 2rem;
+				margin-bottom: -2rem;
+				z-index: 2;
+
+				&::after {
+					content: "";
+					position: absolute;
+					@include adaptiv-value("top", toPX(3.5), toPX(1), 1);
+					@include adaptiv-value("left", toPX(15), toPX(8), 1);
+					display: block;
+					background-image: url("../img/pl.svg");
+					background-size: cover;
+					background-repeat: no-repeat;
+					@include adaptiv-value("width", toPX(6.296), toPX(4), 1);
+					@include adaptiv-value("height", toPX(4.84944), toPX(3), 1);
+					z-index: -1;
+				}
+				&::before {
+					content: "";
+					position: absolute;
+					@include adaptiv-value("top", toPX(4.3), toPX(1.5), 1);
+					@include adaptiv-value("right", toPX(5.5), toPX(10), 1);
+					display: block;
+					background-image: url("../img/pr.svg");
+					background-size: cover;
+					background-repeat: no-repeat;
+					@include adaptiv-value("width", toPX(4.84975), toPX(3), 1);
+					@include adaptiv-value("height", toPX(3.58881), toPX(2), 1);
+					z-index: -1;
+				}
+			}
+		}
+		&:last-child {
+			.passage__title {
+				display: inline-block;
+				background-image: url("../img/pas2.png");
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center top 50%;
+				padding-left: 2rem;
+				padding-right: 2.5rem;
+				padding-bottom: 2rem;
+				margin-bottom: -2rem;
+			}
+			.passage__preparation {
+				position: relative;
+				z-index: 2;
+				&::after {
+					content: "";
+					position: absolute;
+					top: 3.7rem;
+					@include adaptiv-value("left", toPX(-5), toPX(-2), 1);
+					display: block;
+					background-image: url("../img/1-2.svg");
+					background-size: cover;
+					background-repeat: no-repeat;
+					@include adaptiv-value("width", toPX(4.37944), toPX(3), 1);
+					@include adaptiv-value("height", toPX(7.5625), toPX(5), 1);
+					transform: rotate(-3.816deg);
+					z-index: -1;
+				}
+				&::before {
+					content: "";
+					position: absolute;
+					bottom: -0.5rem;
+					@include adaptiv-value("right", toPX(-5), toPX(-1), 1);
+
+					display: block;
+					background-image: url("../img/3-4.svg");
+					background-size: cover;
+					background-repeat: no-repeat;
+					@include adaptiv-value("width", toPX(9.26069), toPX(7), 1);
+					@include adaptiv-value("height", toPX(6.5585), toPX(5), 1);
+					z-index: -1;
+				}
+			}
+		}
+	}
+
+	&__title {
+		color: #1a0e00;
+		font-family: $font-family-cormorant;
+		@include adaptiv-value("font-size", toPX(5), toPX(1.75), 1);
+		font-style: normal;
+		font-weight: 700;
+		line-height: 84.77%;
+		@include adaptiv-value("letter-spacing", toPX(0), toPX(-0.08), 1);
+	}
+
+	&__inner {
+		display: flex;
+		@include adaptiv-value("gap", toPX(7.06), toPX(1.56), 1);
+		@include adaptiv-value("margin-top", toPX(4), toPX(1.69), 1);
+	}
+
+	&__ingredients {
+		@include adaptiv-value("min-width", toPX(33.8125), toPX(5), 1);
+		ul {
+			list-style-type: disc;
+			padding-left: 1rem;
+			color: #1a0e00;
+			font-family: $font-family-philosopher;
+			@include adaptiv-value("font-size", toPX(1.625), toPX(1), 1);
+			font-size: 1.625rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			@include adaptiv-value("margin-top", toPX(0.5), toPX(0.63), 1);
+		}
+	}
+
+	&__label {
+		color: #1a0e00;
+		font-family: $font-family-philosopher;
+		@include adaptiv-value("font-size", toPX(2.125), toPX(1.1875), 1);
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+	}
+
+	&__preparation {
+		ol {
+			list-style-type: decimal;
+			padding-left: 1rem;
+			color: #1a0e00;
+			font-family: $font-family-philosopher;
+			@include adaptiv-value("font-size", toPX(1.625), toPX(1), 1);
+			font-size: 1.625rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			@include adaptiv-value("margin-top", toPX(0.87), toPX(0.63), 1);
+		}
+	}
+
+	&__button {
+		@include adaptiv-value("margin-top", toPX(1.62), toPX(1), 1);
+	}
+}
+
+@include media-width($md) {
+	.passage {
+		&__inner {
+			flex-direction: column;
+		}
+		&__ingredients {
+			min-width: none;
+		}
+		&__item {
+			&:first-child {
+				.passage__title {
+					padding-left: 0;
+					padding-right: 0;
+					padding-top: 1rem;
+					margin-top: -1rem;
+					background-position: center top 90%;
+					&::after {
+						display: none;
+					}
+					&::before {
+						display: none;
+					}
+				}
+			}
+			&:last-child {
+				.passage__title {
+					padding-left: 0;
+					padding-right: 0;
+					background-image: url("../img/pas-1.png");
+					background-position: center top 80%;
+				}
+				.passage__preparation {
+					&::after {
+						display: none;
+					}
+					&::before {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

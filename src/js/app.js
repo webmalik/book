@@ -5,3 +5,4 @@ wmRoot.isWebp();
 wmRoot.project();
 
 wmFunctions.burgerMenu();
+wmFunctions.reviewsSlider();

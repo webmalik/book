@@ -1,4 +1,10 @@
 import $ from "jquery";
+import Swiper from "swiper";
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 export function burgerMenu() {
 	const burger = document.querySelector('.header__burger');
@@ -265,4 +271,47 @@ export function inputPassword() {
 			})
 		});
 	}
+}
+
+/******** Book project */
+
+export function reviewsSlider() {
+	const swiper = new Swiper('.reviews__slider', {
+		loop: true,
+		modules: [Navigation, Pagination, Autoplay],
+		slidesPerView: 2,
+		spaceBetween: 40,
+		centeredSlides: true,
+
+		pagination: {
+			el: '.reviews__pagination',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.reviews__next',
+			prevEl: '.reviews__prev',
+		},
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1.8,
+				spaceBetween: 40,
+			},
+			480: {
+				slidesPerView: 2,
+				spaceBetween: 40,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 64,
+			},
+			1024: {
+				slidesPerView: 4,
+				spaceBetween: 74,
+			},
+		},
+	});
 }

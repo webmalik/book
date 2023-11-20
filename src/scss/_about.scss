@@ -1,0 +1,107 @@
+.about {
+	&__title {
+		position: relative;
+		color: #1a0e00;
+		font-family: $font-family-cormorant;
+		@include adaptiv-value("font-size", toPX(10.625), toPX(2.4375), 1);
+		font-style: normal;
+		font-weight: 700;
+		line-height: 81.8%;
+		@include adaptiv-value("letter-spacing", toPX(-0.31875), toPX(-0.07313), 1);
+		z-index: 3;
+		text-wrap: balance;
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		gap: 1rem;
+		//flex-wrap: wrap;
+	}
+
+	&__link {
+		color: #1a0e00;
+		font-family: $font-family-philosopher;
+		@include adaptiv-value("font-size", toPX(2.125), toPX(1.375), 1);
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		text-decoration-line: underline;
+		padding-bottom: 1.63rem;
+	}
+
+	&__image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include adaptiv-value("margin-top", toPX(-5), toPX(1.31), 1);
+	}
+
+	&__img-trim {
+		overflow: hidden;
+		border-radius: 50%;
+		@include adaptiv-value("max-width", toPX(48.4375), toPX(17.6875), 1);
+		@include adaptiv-value("max-height", toPX(48.4375), toPX(17.6875), 1);
+	}
+
+	&__text {
+		color: #1a0e00;
+		font-family: $font-family-philosopher;
+		@include adaptiv-value("font-size", toPX(2.125), toPX(1.1875), 1);
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		padding-bottom: 1.63rem;
+		display: flex;
+		flex-direction: column;
+		@include adaptiv-value("gap", toPX(2.69), toPX(1.28), 1);
+	}
+
+	&__bg-1 {
+		display: inline-block;
+		background-image: url("../img/ab-1.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center top 5px;
+		padding: 0.5rem 1rem 0.5rem;
+		margin: -0.5rem -1rem -0.5rem;
+	}
+
+	&__bg-2 {
+		display: inline-block;
+		background-image: url("../img/ab-2.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center top 10px;
+		padding: 0.5rem 0.5rem 0.5rem;
+		margin: -0.5rem -0.5rem -0.5rem;
+	}
+}
+@include media-width(1400px) {
+	.about {
+		&__title {
+			br {
+				display: none;
+			}
+		}
+	}
+}
+@include media-width(1250px) {
+	.about {
+		&__link {
+			display: none;
+		}
+		&__image {
+			@include adaptiv-value("margin-top", toPX(1), toPX(1.31), 1);
+		}
+	}
+}
+@include media-width($md) {
+	.about {
+		&__wrapper {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+}
