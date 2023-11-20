@@ -267,22 +267,43 @@ meter {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
+  src: url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.woff2") format("woff2");
+  font-weight: Medium;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
+  font-weight: Regular;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.woff2") format("woff2");
+  font-weight: Medium;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
+  font-weight: Regular;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
   src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2");
   font-weight: Bold;
   font-style: normal;
 }
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Philosopher";
   font-display: swap;
-  src: url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.woff2") format("woff2");
-  font-weight: Medium;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
-  font-weight: Regular;
+  src: url("../fonts/Philosopher-400.woff") format("woff"), url("../fonts/Philosopher-400.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -293,10 +314,10 @@ meter {
   font-style: normal;
 }
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Philosopher";
   font-display: swap;
-  src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
-  font-weight: Regular;
+  src: url("../fonts/Philosopher-400.woff") format("woff"), url("../fonts/Philosopher-400.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -304,27 +325,6 @@ meter {
   font-display: swap;
   src: url("../fonts/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
   font-weight: SemiBold;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.woff2") format("woff2");
-  font-weight: Medium;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Philosopher";
-  font-display: swap;
-  src: url("../fonts/Philosopher-400.woff") format("woff"), url("../fonts/Philosopher-400.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Philosopher";
-  font-display: swap;
-  src: url("../fonts/Philosopher-400.woff") format("woff"), url("../fonts/Philosopher-400.woff2") format("woff2");
-  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -347,12 +347,14 @@ meter {
 html,
 body {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Philosopher", sans-serif;
   font-weight: normal;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 picture,
@@ -379,6 +381,7 @@ li a {
   display: flex;
   flex-direction: column;
   background-color: #fbf5dd;
+  scroll-behavior: smooth;
 }
 
 .title {

@@ -1,12 +1,14 @@
 html,
 body {
 	height: 100%;
+	scroll-behavior: smooth;
 }
 
 body {
 	font-family: $font-family;
 	font-weight: normal;
 	font-size: 16px;
+	scroll-behavior: smooth;
 }
 
 picture,
@@ -35,6 +37,7 @@ li {
 	display: flex;
 	flex-direction: column;
 	background-color: $main-color;
+	scroll-behavior: smooth;
 }
 
 .title {
