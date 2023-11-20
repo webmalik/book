@@ -63,20 +63,62 @@
 @include media-width($md) {
 	.header {
 		&__wrapper {
+			display: flex;
+			justify-content: space-between;
 		}
 
 		&__logo {
+			position: relative;
+			z-index: 5;
 		}
 
 		&__nav {
+			position: fixed;
+			top: -100%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #fbf5dd;
+			padding-top: 5.88rem;
+			justify-content: space-between;
+			height: 100%;
+			padding-bottom: 1.5rem;
+			transition: all 0.5s ease-in-out;
+
+			&.active {
+				top: 0;
+				transition: all 0.5s ease-in-out;
+			}
 		}
 
 		&__menu {
+			flex-direction: column;
+			gap: 1.19rem;
+			padding: 0 1.25rem;
+
+			li {
+				width: 100%;
+				font-size: 2.625rem;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 81.8%; /* 2.14725rem */
+				letter-spacing: -0.07875rem;
+				padding-bottom: 1.19rem;
+				border-bottom: 1px solid rgba($color: #4c200d, $alpha: 0.5);
+			}
+		}
+
+		&__buttons {
+			padding: 0 1.25rem;
+			display: flex;
+			flex-direction: column;
+			gap: 0.63rem;
 		}
 
 		&__button {
-			&.active {
-			}
+			display: block;
+			text-align: center;
+			padding: 1.31rem 0;
 		}
 
 		&__burger {

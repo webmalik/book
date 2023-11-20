@@ -3,3 +3,5 @@ import * as wmFunctions from "./modules/functions.js"
 
 wmRoot.isWebp();
 wmRoot.project();
+
+wmFunctions.burgerMenu();

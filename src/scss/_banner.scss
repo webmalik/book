@@ -73,3 +73,32 @@
 		}
 	}
 }
+
+@include media-width($md) {
+	.banner {
+		display: flex;
+		flex-direction: column-reverse;
+		min-height: auto;
+
+		&__image {
+			//height: 50dvh;
+			border-radius: 0;
+			align-items: flex-end;
+			overflow: hidden;
+			picture,
+			img {
+				@include adaptiv-value("max-width", toPX(18), toPX(11.25), 1);
+				transform: translateY(30%);
+			}
+		}
+
+		&__link {
+			margin-left: 0;
+			margin-bottom: 0;
+		}
+
+		&__buttons {
+			flex-direction: column;
+		}
+	}
+}

@@ -2,11 +2,11 @@ import $ from "jquery";
 
 export function burgerMenu() {
 	const burger = document.querySelector('.header__burger');
-	const box = document.querySelector('.header__box');
+	const box = document.querySelector('.header__nav');
 	const body = document.body;
 
 	burger.addEventListener('click', () => {
-		burger.classList.toggle('open');
+		burger.classList.toggle('active');
 		box.classList.toggle('active');
 		body.classList.toggle('lock');
 	});

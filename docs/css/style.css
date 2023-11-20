@@ -258,6 +258,62 @@ meter {
   font-style: normal;
 }
 @font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2");
+  font-weight: Bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2");
+  font-weight: Bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
+  font-weight: Regular;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.woff2") format("woff2");
+  font-weight: Medium;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
+  font-weight: Regular;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
+  font-weight: SemiBold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.woff2") format("woff2");
+  font-weight: Medium;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
+  font-weight: SemiBold;
+  font-style: normal;
+}
+@font-face {
   font-family: "Philosopher";
   font-display: swap;
   src: url("../fonts/Philosopher-400.woff") format("woff"), url("../fonts/Philosopher-400.woff2") format("woff2");
@@ -346,7 +402,8 @@ li a {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 1.75rem 0 1.81rem 0;
+  padding-top: 28px;
+  padding-bottom: 28.96px;
   color: #1a0e00;
   font-family: "Philosopher", sans-serif;
   font-size: 26px;
@@ -358,12 +415,31 @@ li a {
 }
 @media (max-width: 1200px) {
   .button {
+    padding-top: calc(20.96px + 7.04 * (100vw - 375px) / 825);
+  }
+}
+@media (max-width: 1200px) {
+  .button {
+    padding-bottom: calc(20.96px + 8 * (100vw - 375px) / 825);
+  }
+}
+@media (max-width: 1200px) {
+  .button {
     font-size: calc(16px + 10 * (100vw - 375px) / 825);
   }
 }
 .button.active {
   background-color: #1a0e00;
   color: #fbf5dd;
+}
+
+.mt {
+  margin-top: 220px;
+}
+@media (max-width: 1200px) {
+  .mt {
+    margin-top: calc(100px + 120 * (100vw - 375px) / 825);
+  }
 }
 
 .main {
@@ -1109,6 +1185,57 @@ li a {
 }
 
 @media (max-width: 992px) {
+  .header__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header__logo {
+    position: relative;
+    z-index: 5;
+  }
+  .header__nav {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fbf5dd;
+    padding-top: 5.88rem;
+    justify-content: space-between;
+    height: 100%;
+    padding-bottom: 1.5rem;
+    transition: all 0.5s ease-in-out;
+  }
+  .header__nav.active {
+    top: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  .header__menu {
+    flex-direction: column;
+    gap: 1.19rem;
+    padding: 0 1.25rem;
+  }
+  .header__menu li {
+    width: 100%;
+    font-size: 2.625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 81.8%; /* 2.14725rem */
+    letter-spacing: -0.07875rem;
+    padding-bottom: 1.19rem;
+    border-bottom: 1px solid rgba(76, 32, 13, 0.5);
+  }
+  .header__buttons {
+    padding: 0 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.63rem;
+  }
+  .header__button {
+    display: block;
+    text-align: center;
+    padding: 1.31rem 0;
+  }
   .header__burger {
     display: block;
   }
@@ -1206,5 +1333,37 @@ li a {
 @media (max-width: 1200px) {
   .banner__buttons {
     margin-top: calc(24.48px + 20.48 * (100vw - 375px) / 825);
+  }
+}
+@media (max-width: 992px) {
+  .banner {
+    display: flex;
+    flex-direction: column-reverse;
+    min-height: auto;
+  }
+  .banner__image {
+    border-radius: 0;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+  .banner__image picture,
+  .banner__image img {
+    max-width: 288px;
+    transform: translateY(30%);
+  }
+}
+@media (max-width: 992px) and (max-width: 1200px) {
+  .banner__image picture,
+  .banner__image img {
+    max-width: calc(180px + 108 * (100vw - 375px) / 825);
+  }
+}
+@media (max-width: 992px) {
+  .banner__link {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  .banner__buttons {
+    flex-direction: column;
   }
 }
