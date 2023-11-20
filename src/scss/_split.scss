@@ -1,0 +1,114 @@
+.split {
+	&__title {
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.25rem;
+		@include adaptiv-value("margin-top", toPX(4.42), toPX(1.88), 1);
+	}
+
+	&__card {
+		position: relative;
+		border-radius: 0.9375rem;
+		background: #ffd6a7;
+		@include adaptiv-value("padding-bottom", toPX(2.25), toPX(1.27), 1);
+		@include adaptiv-value("padding-left", toPX(2.19), toPX(1.25), 1);
+		@include adaptiv-value("padding-top", toPX(2.25), toPX(1.27), 1);
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: space-between;
+
+		&:nth-child(2) {
+			&::after {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				@include adaptiv-value("max-width", toPX(5.94094), toPX(3.39681), 1);
+				@include adaptiv-value("max-height", toPX(8.85938), toPX(5), 1);
+				background-image: url("../img/split-border-1.png");
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+		}
+		&:nth-child(3) {
+			&::after {
+				content: "";
+				display: block;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+				@include adaptiv-value("max-width", toPX(5.94094), toPX(3.39681), 1);
+				@include adaptiv-value("max-height", toPX(8.85938), toPX(5), 1);
+				background-image: url("../img/split-border-1.png");
+				background-size: contain;
+				background-repeat: no-repeat;
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&__image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include adaptiv-value("min-height", toPX(24.81), toPX(13.75), 1);
+		//min-height: 24.81rem;
+
+		picture,
+		img {
+			max-height: 80%;
+			width: auto;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		@include adaptiv-value("gap", toPX(0.63), toPX(0.35), 1);
+		@include adaptiv-value("max-width", toPX(30), toPX(16.5), 1);
+		height: 100%;
+	}
+
+	&__label {
+		color: $primary-color;
+		font-family: $font-family-philosopher;
+		@include adaptiv-value("font-size", toPX(2.125), toPX(1.1875), 1);
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+	}
+
+	&__text {
+		color: $primary-color;
+		font-family: $font-family-philosopher;
+		@include adaptiv-value("font-size", toPX(1.625), toPX(1), 1);
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+}
+
+@include media-width($md) {
+	.split {
+		&__wrapper {
+			grid-template-columns: 1fr;
+		}
+
+		&__inner {
+			height: auto;
+		}
+
+		&__image {
+			min-height: auto;
+		}
+	}
+}
