@@ -320,6 +320,10 @@ export function cardShow() {
 	const cards = document.querySelectorAll('.card')
 	const button = document.querySelector('.show__button')
 
+	if (cards.length > 3) {
+		button.style.display = 'flex';
+	}
+
 	button.addEventListener('click', (e) => {
 		e.preventDefault();
 		let show = document.querySelector('.show')

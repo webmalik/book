@@ -10,9 +10,9 @@
 	}
 }
 .card {
-	@include adaptiv-value("border-top-left-radius", toPX(1.25), toPX(0.5), 1);
-	@include adaptiv-value("border-bottom-left-radius", toPX(1.25), toPX(0.5), 1);
-	@include adaptiv-value("border-bottom-right-radius", toPX(1.25), toPX(0.5), 1);
+	@include adaptiv-value("border-top-left-radius", toPX(1.25), toPX(0.625), 1);
+	@include adaptiv-value("border-bottom-left-radius", toPX(1.25), toPX(0.625), 1);
+	@include adaptiv-value("border-bottom-right-radius", toPX(1.25), toPX(0.625), 1);
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
@@ -145,7 +145,6 @@
 	}
 
 	.show__button {
-		display: flex;
 		margin-top: 1.25rem;
 	}
 }

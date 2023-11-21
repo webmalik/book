@@ -2153,17 +2153,17 @@ li a {
 }
 @media (max-width: 1920px) {
   .card {
-    border-top-left-radius: calc(8px + 12 * (100vw - 375px) / 1545);
+    border-top-left-radius: calc(10px + 10 * (100vw - 375px) / 1545);
   }
 }
 @media (max-width: 1920px) {
   .card {
-    border-bottom-left-radius: calc(8px + 12 * (100vw - 375px) / 1545);
+    border-bottom-left-radius: calc(10px + 10 * (100vw - 375px) / 1545);
   }
 }
 @media (max-width: 1920px) {
   .card {
-    border-bottom-right-radius: calc(8px + 12 * (100vw - 375px) / 1545);
+    border-bottom-right-radius: calc(10px + 10 * (100vw - 375px) / 1545);
   }
 }
 .card__image {
@@ -2356,7 +2356,6 @@ li a {
 }
 @media (max-width: 992px) {
   .show__button {
-    display: flex;
     margin-top: 1.25rem;
   }
 }
