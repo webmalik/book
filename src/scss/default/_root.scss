@@ -51,13 +51,13 @@ li {
 	text-wrap: balance;
 }
 
-@include media-width(1480px) {
-	.title {
-		br {
-			display: none;
-		}
-	}
-}
+// @include media-width(1480px) {
+// 	.title {
+// 		br {
+// 			display: none;
+// 		}
+// 	}
+// }
 
 .button {
 	display: flex;
