@@ -315,3 +315,25 @@ export function reviewsSlider() {
 		},
 	});
 }
+
+export function cardShow() {
+	const cards = document.querySelectorAll('.card')
+	const button = document.querySelector('.show__button')
+
+	button.addEventListener('click', (e) => {
+		e.preventDefault();
+		let show = document.querySelector('.show')
+		if (!show) {
+			cards.forEach((card) => {
+				card.classList.add('show')
+				button.textContent = "Менше збірників"
+			})
+		} else {
+			cards.forEach((card) => {
+				card.classList.remove('show')
+				button.textContent = "Більше збірників"
+			})
+		}
+
+	})
+}

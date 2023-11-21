@@ -19,12 +19,7 @@
 	justify-content: space-between;
 	&__image {
 		position: relative;
-
-		picture,
-		img {
-			height: 100%;
-			width: auto;
-		}
+		overflow: hidden;
 
 		&::after {
 			content: "";
@@ -115,10 +110,42 @@
 	}
 }
 
+.show__button {
+	display: none;
+}
+
 @include media-width($md) {
 	.buy {
 		&__wrapper {
 			grid-template-columns: 1fr;
+			gap: 0;
 		}
+	}
+
+	.card {
+		@include adaptiv-value("margin-top", toPX(1.19), toPX(0.81), 1);
+
+		&:first-child {
+			margin-top: 0 !important;
+		}
+		&:nth-child(n + 4) {
+			max-height: 0;
+			overflow: hidden;
+			margin-top: 0;
+
+			transition: all 0.9s ease-in-out;
+		}
+
+		&.show {
+			max-height: 100rem;
+			@include adaptiv-value("margin-top", toPX(1.19), toPX(0.81), 1);
+
+			transition: all 0.9s ease-in-out;
+		}
+	}
+
+	.show__button {
+		display: flex;
+		margin-top: 1.25rem;
 	}
 }

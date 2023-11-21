@@ -281,20 +281,6 @@ meter {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
-  font-weight: Regular;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
-  font-weight: Regular;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
   src: url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.woff2") format("woff2");
   font-weight: Medium;
   font-style: normal;
@@ -302,15 +288,22 @@ meter {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
+  font-weight: Regular;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
   src: url("../fonts/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
   font-weight: SemiBold;
   font-style: normal;
 }
 @font-face {
-  font-family: "Philosopher";
+  font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Philosopher-400.woff") format("woff"), url("../fonts/Philosopher-400.woff2") format("woff2");
-  font-weight: 400;
+  src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
+  font-weight: Regular;
   font-style: normal;
 }
 @font-face {
@@ -323,8 +316,8 @@ meter {
 @font-face {
   font-family: "Philosopher";
   font-display: swap;
-  src: url("../fonts/Philosopher-700.woff") format("woff"), url("../fonts/Philosopher-700.woff2") format("woff2");
-  font-weight: 700;
+  src: url("../fonts/Philosopher-400.woff") format("woff"), url("../fonts/Philosopher-400.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -332,6 +325,13 @@ meter {
   font-display: swap;
   src: url("../fonts/Philosopher-400.woff") format("woff"), url("../fonts/Philosopher-400.woff2") format("woff2");
   font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Philosopher";
+  font-display: swap;
+  src: url("../fonts/Philosopher-700.woff") format("woff"), url("../fonts/Philosopher-700.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
 }
 @font-face {
@@ -2168,11 +2168,7 @@ li a {
 }
 .card__image {
   position: relative;
-}
-.card__image picture,
-.card__image img {
-  height: 100%;
-  width: auto;
+  overflow: hidden;
 }
 .card__image::after {
   content: "";
@@ -2319,9 +2315,49 @@ li a {
   }
 }
 
+.show__button {
+  display: none;
+}
+
 @media (max-width: 992px) {
   .buy__wrapper {
     grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .card {
+    margin-top: 19.04px;
+  }
+}
+@media (max-width: 992px) and (max-width: 1920px) {
+  .card {
+    margin-top: calc(12.96px + 6.08 * (100vw - 375px) / 1545);
+  }
+}
+@media (max-width: 992px) {
+  .card:first-child {
+    margin-top: 0 !important;
+  }
+  .card:nth-child(n+4) {
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 0;
+    transition: all 0.9s ease-in-out;
+  }
+  .card.show {
+    max-height: 100rem;
+    margin-top: 19.04px;
+    transition: all 0.9s ease-in-out;
+  }
+}
+@media (max-width: 992px) and (max-width: 1920px) {
+  .card.show {
+    margin-top: calc(12.96px + 6.08 * (100vw - 375px) / 1545);
+  }
+}
+@media (max-width: 992px) {
+  .show__button {
+    display: flex;
+    margin-top: 1.25rem;
   }
 }
 .footer {
