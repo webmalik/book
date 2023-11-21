@@ -58,8 +58,8 @@
 		justify-content: center;
 
 		.swiper-pagination-bullet {
-			@include adaptiv-value("max-width", toPX(0.75), toPX(0.40063), 1);
-			@include adaptiv-value("max-height", toPX(0.75), toPX(0.40063), 1);
+			@include adaptiv-value("min-width", toPX(0.75), toPX(0.40063), 1);
+			@include adaptiv-value("min-height", toPX(0.75), toPX(0.40063), 1);
 			background: rgba($color: #1a0e00, $alpha: 0.5);
 		}
 
