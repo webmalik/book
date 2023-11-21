@@ -291,10 +291,10 @@ export function reviewsSlider() {
 			nextEl: '.reviews__next',
 			prevEl: '.reviews__prev',
 		},
-		autoplay: {
-			delay: 3000,
-			disableOnInteraction: false,
-		},
+		// autoplay: {
+		// 	delay: 3000,
+		// 	disableOnInteraction: false,
+		// },
 		breakpoints: {
 			320: {
 				slidesPerView: 1.8,
