@@ -74,6 +74,16 @@
 	}
 }
 
+@include media-width(1480px) {
+	.banner {
+		&__desc {
+			br {
+				display: none;
+			}
+		}
+	}
+}
+
 @include media-width($md) {
 	.banner {
 		display: flex;

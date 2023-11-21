@@ -1345,6 +1345,11 @@ li a {
     margin-top: calc(24.48px + 20.48 * (100vw - 375px) / 1545);
   }
 }
+@media (max-width: 1480px) {
+  .banner__desc br {
+    display: none;
+  }
+}
 @media (max-width: 992px) {
   .banner {
     display: flex;
